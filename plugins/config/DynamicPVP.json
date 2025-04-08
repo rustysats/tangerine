@@ -4,28 +4,45 @@
     "Log Debug To File": false,
     "Compare Radius (Used to determine if it is a SupplySignal)": 2.0,
     "If the entity has an owner, don't create a PVP zone": true,
+    "Use TruePVE PVP Delay API (more efficient and cross-plugin, but supersedes PVP Delay Flags)": false,
     "PVP Delay Flags": "ZonePlayersCanDamageDelayedPlayers, DelayedPlayersCanDamageZonePlayers, DelayedPlayersCanDamageDelayedPlayers"
   },
   "Chat Settings": {
     "Command": "dynpvp",
     "Chat Prefix": "[DynamicPVP]: ",
     "Chat Prefix Color": "#00FFFF",
-    "Chat SteamID Icon": 0
+    "Chat SteamID Icon": 0,
+    "Zone Show Distance": 1000.0,
+    "Zone Show Duration (in seconds)": 15.0
   },
   "General Event Settings": {
     "Bradley Event": {
       "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Enable Bots (Need BotSpawn Plugin)": false,
+      "BotSpawn Profile Name": "",
+      "Event Duration": 600.0,
       "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
         "Zone Radius": 20.0,
         "Zone Size": {
           "x": 0.0,
@@ -33,157 +50,149 @@
           "z": 0.0
         },
         "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Enable Bots (Need BotSpawn Plugin)": false,
-      "BotSpawn Profile Name": "",
-      "Event Duration": 600.0
+        "Fixed Rotation": false
+      }
     },
     "Patrol Helicopter Event": {
       "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
       "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
       "Enable Domes": true,
       "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Enable Bots (Need BotSpawn Plugin)": false,
-      "BotSpawn Profile Name": "",
-      "Event Duration": 600.0
-    },
-    "Supply Signal Event": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": false,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 10.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
       "Enable Bots (Need BotSpawn Plugin)": false,
       "BotSpawn Profile Name": "",
       "Event Duration": 600.0,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 50.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false
+      }
+    },
+    "Supply Signal Event": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Enable Bots (Need BotSpawn Plugin)": false,
+      "BotSpawn Profile Name": "",
+      "Event Duration": 600.0,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 59.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Transform Position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      },
       "Start Event When Spawned (If false, the event starts when landed)": true,
       "Stop Event When Killed": false,
       "Event Timer Starts When Looted": false
     },
     "Timed Supply Event": {
       "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": false,
-      "Domes Darkness": 8,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": false,
+      "Domes Darkness": 8,
+      "Enable Bots (Need BotSpawn Plugin)": false,
+      "BotSpawn Profile Name": "",
+      "Event Duration": 600.0,
       "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
         "Zone Radius": 10.0,
         "Zone Size": {
           "x": 0.0,
           "y": 0.0,
           "z": 0.0
         },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
+        "Transform Position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
       },
-      "Enable Bots (Need BotSpawn Plugin)": false,
-      "BotSpawn Profile Name": "",
-      "Event Duration": 600.0,
       "Start Event When Spawned (If false, the event starts when landed)": true,
       "Stop Event When Killed": false,
       "Event Timer Starts When Looted": false
     },
     "Hackable Crate Event": {
       "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Enable Bots (Need BotSpawn Plugin)": false,
+      "BotSpawn Profile Name": "",
+      "Event Duration": 600.0,
       "Dynamic PVP Zone Settings": {
-        "Zone Radius": 20.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
         "Zone Comfort": 0.0,
         "Zone Radiation": 0.0,
         "Zone Temperature": 0.0,
@@ -193,11 +202,19 @@
         "Enter Message": "Entering a PVP area!",
         "Leave Message": "Leaving a PVP area.",
         "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
+        "Extra Zone Flags": [],
+        "Zone Radius": 20.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Transform Position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
       },
-      "Enable Bots (Need BotSpawn Plugin)": false,
-      "BotSpawn Profile Name": "",
-      "Event Duration": 600.0,
       "Start Event When Spawned (If false, the event starts when unlocking)": true,
       "Stop Event When Killed": false,
       "Event Timer Starts When Looted": false,
@@ -207,25 +224,18 @@
     },
     "Excavator Ignition Event": {
       "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
       "Dynamic PVP Zone Settings": {
-        "Zone Radius": 150.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
         "Zone Comfort": 0.0,
         "Zone Radiation": 0.0,
         "Zone Temperature": 0.0,
@@ -235,7 +245,15 @@
         "Enter Message": "Entering a PVP area!",
         "Leave Message": "Leaving a PVP area.",
         "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
+        "Extra Zone Flags": [],
+        "Zone Radius": 150.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false
       },
       "Zone ID": "",
       "Transform Position": {
@@ -246,62 +264,62 @@
     },
     "Cargo Ship Event": {
       "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Event State On Spawn (true=enabled, false=disabled)": true,
+      "Event State On Harbor Approach": true,
+      "Event State On Harbor Docking": true,
+      "Event State On Harbor Departure": true,
+      "Event State On Map Egress": true,
       "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
         "Zone Size": {
           "x": 25.9,
           "y": 43.3,
           "z": 152.8
         },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
         "Transform Position": {
           "x": 0.0,
           "y": 21.6,
           "z": 6.6
-        },
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
+        }
       }
     }
   },
   "Monument Event Settings": {
-    "Ferry Terminal": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
+    "Abandoned Cabins": {
+      "Enable Event": false,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
       "Dynamic PVP Zone Settings": {
-        "Zone Radius": 75.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
         "Zone Comfort": 0.0,
         "Zone Radiation": 0.0,
         "Zone Temperature": 0.0,
@@ -311,28 +329,7 @@
         "Enter Message": "Entering a PVP area!",
         "Leave Message": "Leaving a PVP area.",
         "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Train Tunnel": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
+        "Extra Zone Flags": [],
         "Zone Radius": 0.0,
         "Zone Size": {
           "x": 0.0,
@@ -341,172 +338,7 @@
         },
         "Zone Rotation": 0.0,
         "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Harbor A": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 150.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Harbor B": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 150.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Fishing Village": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Large Fishing Village": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
+        "Auto-calculate zone geometry (overwrites existing values)": false
       },
       "Zone ID": "",
       "Transform Position": {
@@ -517,17 +349,28 @@
     },
     "Abandoned Military Base": {
       "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
       "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
         "Zone Radius": 0.0,
         "Zone Size": {
           "x": 0.0,
@@ -536,796 +379,7 @@
         },
         "Zone Rotation": 0.0,
         "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Arctic Research Base": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 75.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Launch Site": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 275.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Bandit Camp": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Missile Silo": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Outpost": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Giant Excavator Pit": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 125.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Junkyard": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 75.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Ranch": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Power Plant": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 125.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Water Treatment Plant": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 150.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Train Yard": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 125.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Airfield": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 175.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Sewer Branch": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 75.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Sulfur Quarry": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Stone Quarry": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Satellite Dish": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 75.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "The Dome": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "HQM Quarry": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Train Tunnel Link": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Abandoned Cabins": {
-      "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 0.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
+        "Auto-calculate zone geometry (overwrites existing values)": false
       },
       "Zone ID": "",
       "Transform Position": {
@@ -1336,25 +390,18 @@
     },
     "Abandoned Supermarket": {
       "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
       "Dynamic PVP Zone Settings": {
-        "Zone Radius": 30.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
         "Zone Comfort": 0.0,
         "Zone Radiation": 0.0,
         "Zone Temperature": 0.0,
@@ -1364,28 +411,7 @@
         "Enter Message": "Entering a PVP area!",
         "Leave Message": "Leaving a PVP area.",
         "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Oxum's Gas Station": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
+        "Extra Zone Flags": [],
         "Zone Radius": 50.0,
         "Zone Size": {
           "x": 0.0,
@@ -1394,6 +420,29 @@
         },
         "Zone Rotation": 0.0,
         "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Airfield": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
         "Zone Comfort": 0.0,
         "Zone Radiation": 0.0,
         "Zone Temperature": 0.0,
@@ -1403,29 +452,8 @@
         "Enter Message": "Entering a PVP area!",
         "Leave Message": "Leaving a PVP area.",
         "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Radtown": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 60.0,
+        "Extra Zone Flags": [],
+        "Zone Radius": 200.0,
         "Zone Size": {
           "x": 0.0,
           "y": 0.0,
@@ -1433,6 +461,29 @@
         },
         "Zone Rotation": 0.0,
         "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Arctic Research Base": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
         "Zone Comfort": 0.0,
         "Zone Radiation": 0.0,
         "Zone Temperature": 0.0,
@@ -1442,29 +493,8 @@
         "Enter Message": "Entering a PVP area!",
         "Leave Message": "Leaving a PVP area.",
         "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
-      },
-      "Zone ID": "",
-      "Transform Position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      }
-    },
-    "Mining Outpost": {
-      "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
-      "Delay In Starting Event": 0.0,
-      "Delay In Stopping Event": 0.0,
-      "TruePVE Mapping": "exclude",
-      "Use Blacklist Commands (If false, a whitelist is used)": true,
-      "Command works for PVP delayed players": false,
-      "Command List (If there is a '/' at the front, it is a chat command)": [],
-      "Dynamic PVP Zone Settings": {
-        "Zone Radius": 30.0,
+        "Extra Zone Flags": [],
+        "Zone Radius": 125.0,
         "Zone Size": {
           "x": 0.0,
           "y": 0.0,
@@ -1472,16 +502,7 @@
         },
         "Zone Rotation": 0.0,
         "Fixed Rotation": false,
-        "Zone Comfort": 0.0,
-        "Zone Radiation": 0.0,
-        "Zone Temperature": 0.0,
-        "Enable Safe Zone": false,
-        "Eject Spawns": "",
-        "Zone Parent ID": "",
-        "Enter Message": "Entering a PVP area!",
-        "Leave Message": "Leaving a PVP area.",
-        "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
+        "Auto-calculate zone geometry (overwrites existing values)": false
       },
       "Zone ID": "",
       "Transform Position": {
@@ -1490,19 +511,30 @@
         "z": 0.0
       }
     },
-    "Underwater Lab": {
+    "Bandit Camp": {
       "Enable Event": false,
-      "Enable PVP Delay": false,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
       "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
         "Zone Radius": 0.0,
         "Zone Size": {
           "x": 0.0,
@@ -1511,6 +543,29 @@
         },
         "Zone Rotation": 0.0,
         "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Ferry Terminal": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
         "Zone Comfort": 0.0,
         "Zone Radiation": 0.0,
         "Zone Temperature": 0.0,
@@ -1520,7 +575,344 @@
         "Enter Message": "Entering a PVP area!",
         "Leave Message": "Leaving a PVP area.",
         "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
+        "Extra Zone Flags": [],
+        "Zone Radius": 150.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Fishing Village": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Giant Excavator Pit": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 200.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Harbor A": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 250.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Harbor B": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 250.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "HQM Quarry": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Junkyard": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 150.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Large Barn": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Large Fishing Village": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
       },
       "Zone ID": "",
       "Transform Position": {
@@ -1531,25 +923,18 @@
     },
     "Large Oil Rig": {
       "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
       "Dynamic PVP Zone Settings": {
-        "Zone Radius": 100.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
         "Zone Comfort": 0.0,
         "Zone Radiation": 0.0,
         "Zone Temperature": 0.0,
@@ -1559,7 +944,16 @@
         "Enter Message": "Entering a PVP area!",
         "Leave Message": "Leaving a PVP area.",
         "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
+        "Extra Zone Flags": [],
+        "Zone Radius": 200.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
       },
       "Zone ID": "",
       "Transform Position": {
@@ -1568,27 +962,20 @@
         "z": 0.0
       }
     },
-    "Oil Rig": {
+    "Launch Site": {
       "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
       "Dynamic PVP Zone Settings": {
-        "Zone Radius": 100.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
         "Zone Comfort": 0.0,
         "Zone Radiation": 0.0,
         "Zone Temperature": 0.0,
@@ -1598,7 +985,16 @@
         "Enter Message": "Entering a PVP area!",
         "Leave Message": "Leaving a PVP area.",
         "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
+        "Extra Zone Flags": [],
+        "Zone Radius": 350.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
       },
       "Zone ID": "",
       "Transform Position": {
@@ -1609,25 +1005,18 @@
     },
     "Lighthouse": {
       "Enable Event": true,
-      "Enable PVP Delay": true,
-      "PVP Delay Time": 10.0,
-      "Enable Domes": true,
-      "Domes Darkness": 8,
       "Delay In Starting Event": 0.0,
       "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
       "TruePVE Mapping": "exclude",
       "Use Blacklist Commands (If false, a whitelist is used)": true,
       "Command works for PVP delayed players": false,
       "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
       "Dynamic PVP Zone Settings": {
-        "Zone Radius": 50.0,
-        "Zone Size": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "Zone Rotation": 0.0,
-        "Fixed Rotation": false,
         "Zone Comfort": 0.0,
         "Zone Radiation": 0.0,
         "Zone Temperature": 0.0,
@@ -1637,7 +1026,1533 @@
         "Enter Message": "Entering a PVP area!",
         "Leave Message": "Leaving a PVP area.",
         "Permission Required To Enter Zone": "",
-        "Extra Zone Flags": []
+        "Extra Zone Flags": [],
+        "Zone Radius": 150.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Military Tunnel": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 200.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Mining Outpost": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 50.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Missile Silo": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Oil Rig": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 200.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Outpost": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Oxum's Gas Station": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 50.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Power Plant": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 175.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Radtown": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 150.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Ranch": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Satellite Dish": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 150.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Sewer Branch": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 150.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Stone Quarry": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Sulfur Quarry": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "The Dome": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 200.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Bunker": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Curve North-East": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Curve North-West": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Curve South-East": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Curve South-West": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Dwelling": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Intersection East": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Intersection North": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Intersection South": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Intersection West": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Link": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Station East-West": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Station North-South": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Straight East-West": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Straight North-South": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Transition East-West": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Transition North-South": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Upwards South": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Tunnel Upwards West": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 10.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Train Yard": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 250.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Underwater Lab": {
+      "Enable Event": false,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": false,
+      "PVP Delay Time": 0.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 0.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
+      },
+      "Zone ID": "",
+      "Transform Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Water Treatment Plant": {
+      "Enable Event": true,
+      "Delay In Starting Event": 0.0,
+      "Delay In Stopping Event": 0.0,
+      "Holster Time On Enter (In seconds, or 0 to disable)": 0.0,
+      "Enable PVP Delay": true,
+      "PVP Delay Time": 30.0,
+      "TruePVE Mapping": "exclude",
+      "Use Blacklist Commands (If false, a whitelist is used)": true,
+      "Command works for PVP delayed players": false,
+      "Command List (If there is a '/' at the front, it is a chat command)": [],
+      "Enable Domes": true,
+      "Domes Darkness": 8,
+      "Dynamic PVP Zone Settings": {
+        "Zone Comfort": 0.0,
+        "Zone Radiation": 0.0,
+        "Zone Temperature": 0.0,
+        "Enable Safe Zone": false,
+        "Eject Spawns": "",
+        "Zone Parent ID": "",
+        "Enter Message": "Entering a PVP area!",
+        "Leave Message": "Leaving a PVP area.",
+        "Permission Required To Enter Zone": "",
+        "Extra Zone Flags": [],
+        "Zone Radius": 250.0,
+        "Zone Size": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Zone Rotation": 0.0,
+        "Fixed Rotation": false,
+        "Auto-calculate zone geometry (overwrites existing values)": false
       },
       "Zone ID": "",
       "Transform Position": {
@@ -1649,7 +2564,7 @@
   },
   "Version": {
     "Major": 4,
-    "Minor": 2,
-    "Patch": 20
+    "Minor": 6,
+    "Patch": 0
   }
 }
