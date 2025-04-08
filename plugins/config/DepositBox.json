@@ -1,4 +1,8 @@
 {
-  "DepositBoxSkinID": 1641384897,
-  "DepositItemID": -1779183908
+  "ClaimRewardBudget": "100000",
+  "DepositBoxSkinID": 3406403145,
+  "DepositItemID": -1779183908,
+  "DiscordWebhookUrl": "",
+  "ServerInfoUpdateFreq": 30,
+  "UseServerInfo": true
 }

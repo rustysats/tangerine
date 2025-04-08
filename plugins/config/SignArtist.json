@@ -7,7 +7,7 @@
   "JPG image quality (0-100)": 85,
   "Enable logging file": false,
   "Enable logging console": false,
-  "Enable discord logging": false,
+  "Enable discord logging": true,
   "Discord Webhook": "",
   "Avatar URL": "https://i.imgur.com/dH7V1Dh.png",
   "Discord Username": "Sign Artist"
