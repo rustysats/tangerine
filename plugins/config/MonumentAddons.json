@@ -1,8 +1,8 @@
 {
   "Debug display settings": {
     "Default display duration (seconds)": 60.0,
-    "Display distance": 150.0,
-    "Display distance abbreviated": 300.0,
+    "Display distance": 100.0,
+    "Display distance abbreviated": 200.0,
     "Max addons to show unabbreviated": 1,
     "Entity color": "#FF00FF",
     "Spawn point color": "#FF8000",

@@ -1,0 +1,13 @@
+{
+  "Radio Stream URL": "https://radio.goodmorningbitcoin.com/listen/goodmorningbitcoin/radio.mp3",
+  "Additional Radio Stations (name,url format)": {
+    "Good Morning Bitcoin": "https://radio.goodmorningbitcoin.com/listen/goodmorningbitcoin/radio.mp3"
+  },
+  "Enable for deployed boomboxes": false,
+  "Enable for handheld boomboxes": true,
+  "Enable for static/monument boomboxes": true,
+  "Auto-restart interval (minutes)": 60,
+  "Enable auto-restart": true,
+  "Turn on radios after server restart": true,
+  "Debug mode": false
+}

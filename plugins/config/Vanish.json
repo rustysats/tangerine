@@ -9,6 +9,8 @@
   "Automatically vanish players (with the vanish.use perm) on player connect": true,
   "Automatically vanish players (with the vanish.use perm) on player disconnect": true,
   "Keep a vanished player hidden on disconnect": true,
+  "Teleport a vanished player under the map on disconnect": false,
+  "Teleport a vanished player above the map on connect": true,
   "Bypass violation checks for vanished players": true,
   "Turn off fly hack detection for players in vanish": true,
   "Disable metabolism in vanish": true,
@@ -19,7 +21,7 @@
   "Sound effect to use when vanishing": "assets/prefabs/npc/patrol helicopter/effects/rocket_fire.prefab",
   "Sound effect to use when reappearing": "assets/prefabs/npc/patrol helicopter/effects/rocket_fire.prefab",
   "Enable GUI": true,
-  "Icon URL (.png or .jpg)": "https://i.imgur.com/yL9HNRy.png",
+  "Icon URL (.png or .jpg)": "https://i.ibb.co/3rZzftx/yL9HNRy.png",
   "Image Color": "1 1 1 0.3",
   "Image AnchorMin": "0.175 0.017",
   "Image AnchorMax": "0.22 0.08"

@@ -1,0 +1,67 @@
+{
+  "Show Default PVx UI": true,
+  "Server Default PVx (pvp or pve)": "PVE",
+  "Pvx UI Settings": {
+    "PVE": {
+      "Min Anchor": "0.5 0",
+      "Max Anchor": "0.5 0",
+      "Min Offset": "190 30",
+      "Max Offset": "250 60",
+      "Layer": "Hud",
+      "Text": "PVE",
+      "Text Size": 14,
+      "Text Color": "1 1 1 1",
+      "Background Color": "0.3 0.8 0.1 0.8",
+      "Fade In": 0.25,
+      "Fade Out": 0.25
+    },
+    "PVP": {
+      "Min Anchor": "0.5 0",
+      "Max Anchor": "0.5 0",
+      "Min Offset": "190 30",
+      "Max Offset": "250 60",
+      "Layer": "Hud",
+      "Text": "PVP",
+      "Text Size": 14,
+      "Text Color": "1 1 1 1",
+      "Background Color": "0.8 0.2 0.2 0.8",
+      "Fade In": 0.25,
+      "Fade Out": 0.25
+    },
+    "PVPDelay": {
+      "Min Anchor": "0.5 0",
+      "Max Anchor": "0.5 0",
+      "Min Offset": "190 30",
+      "Max Offset": "250 60",
+      "Layer": "Hud",
+      "Text": "PVP Delay",
+      "Text Size": 12,
+      "Text Color": "1 1 1 1",
+      "Background Color": "0.8 0.5 0.1 0.8",
+      "Fade In": 0.25,
+      "Fade Out": 0.25
+    }
+  },
+  "Adem Event Settings": {
+    "Convoy Event": true,
+    "Armored Train Event": true,
+    "Caravan Event": false,
+    "Sputnik Event": true,
+    "Space Event": false,
+    "Shipwreck Event": false
+  },
+  "KpucTaJl Event Settings": {
+    "Power Plant Event": false,
+    "Ferry Terminal Event": false,
+    "Supermarket Event": false,
+    "Junkyard Event": false,
+    "Arctic Base Event": false,
+    "Gas Station Event": false,
+    "Air Event": false,
+    "Harbor Event": false,
+    "Satellite Dish Event": false,
+    "Water Event": false,
+    "Triangulation Event": false,
+    "Defendable Homes Event": false
+  }
+}

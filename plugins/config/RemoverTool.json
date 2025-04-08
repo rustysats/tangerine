@@ -213,6 +213,10 @@
         "Display Name": "Tugboat",
         "Building Grade": {}
       },
+      "Siege Tower": {
+        "Display Name": "Siege Tower",
+        "Building Grade": {}
+      },
       "Floor Frame": {
         "Display Name": "Floor Frame",
         "Building Grade": {
@@ -1748,6 +1752,94 @@
           }
         }
       },
+      "dpv.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Diver propulsion vehicle",
+        "Price": {},
+        "Refund": {
+          "skidoo": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "ballista.constructable.entity": {
+        "Remove Allowed": true,
+        "Display Name": "Mounted Ballista",
+        "Price": {},
+        "Refund": {
+          "ballista.mounted": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "ballistagun.static.entity": {
+        "Remove Allowed": true,
+        "Display Name": "Ballista",
+        "Price": {},
+        "Refund": {
+          "ballista.static": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "batteringram.constructable.entity": {
+        "Remove Allowed": true,
+        "Display Name": "Battering Ram",
+        "Price": {},
+        "Refund": {
+          "batteringram": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "explosivesiegedeployable": {
+        "Remove Allowed": true,
+        "Display Name": "Propane Explosive Bomb",
+        "Price": {},
+        "Refund": {
+          "catapult.ammo.explosive": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "flammablesiegedeployable": {
+        "Remove Allowed": true,
+        "Display Name": "Firebomb",
+        "Price": {},
+        "Refund": {
+          "catapult.ammo.incendiary": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "catapult.constructable.entity": {
+        "Remove Allowed": true,
+        "Display Name": "Catapult",
+        "Price": {},
+        "Refund": {
+          "catapult": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "siegetower.constructable.entity": {
+        "Remove Allowed": true,
+        "Display Name": "Siege Tower",
+        "Price": {},
+        "Refund": {
+          "siegetower": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
       "door.double.hinged.metal": {
         "Remove Allowed": true,
         "Display Name": "Sheet Metal Double Door",
@@ -2122,6 +2214,17 @@
           }
         }
       },
+      "barricade.medieval": {
+        "Remove Allowed": true,
+        "Display Name": "Medieval Barricade",
+        "Price": {},
+        "Refund": {
+          "barricade.medieval": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
       "barricade.metal": {
         "Remove Allowed": true,
         "Display Name": "Metal Barricade",
@@ -2210,6 +2313,17 @@
           }
         }
       },
+      "beehive.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Beehive",
+        "Price": {},
+        "Refund": {
+          "beehive": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
       "campfire": {
         "Remove Allowed": true,
         "Display Name": "Camp Fire",
@@ -2265,6 +2379,17 @@
           }
         }
       },
+      "chickencoop.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Chicken Coop",
+        "Price": {},
+        "Refund": {
+          "chickencoop": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
       "clantable.deployed": {
         "Remove Allowed": true,
         "Display Name": "Clan Table",
@@ -2293,6 +2418,17 @@
         "Price": {},
         "Refund": {
           "computerstation": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "cookingworkbench.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Cooking Workbench",
+        "Price": {},
+        "Refund": {
+          "cookingworkbench": {
             "amount": 1,
             "skinId": -1
           }
@@ -2551,12 +2687,45 @@
           }
         }
       },
+      "hazmatplushy_deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Hazmat Plushy",
+        "Price": {},
+        "Refund": {
+          "hazmat.plushy": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
       "hitchtrough.deployed": {
         "Remove Allowed": true,
         "Display Name": "Hitch & Trough",
         "Price": {},
         "Refund": {
           "hitchtroughcombo": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "hopper.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Hopper",
+        "Price": {},
+        "Refund": {
+          "hopper": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "io.table.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Engineering Workbench",
+        "Price": {},
+        "Refund": {
+          "iotable": {
             "amount": 1,
             "skinId": -1
           }
@@ -2617,6 +2786,17 @@
           }
         }
       },
+      "medieval.box.wooden.large": {
+        "Remove Allowed": true,
+        "Display Name": "Medieval Large Wood Box",
+        "Price": {},
+        "Refund": {
+          "medieval.box.wooden.large": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
       "legacy_furnace": {
         "Remove Allowed": true,
         "Display Name": "Legacy Furnace",
@@ -2645,6 +2825,39 @@
         "Price": {},
         "Refund": {
           "locker": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "lunar_near_year_2025_wall_divider_a": {
+        "Remove Allowed": true,
+        "Display Name": "Lunar Wall Frame Inlay",
+        "Price": {},
+        "Refund": {
+          "wall.frame.lunar2025_a": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "lunar_near_year_2025_wall_divider_b": {
+        "Remove Allowed": true,
+        "Display Name": "Lunar Wall Frame Swirling",
+        "Price": {},
+        "Refund": {
+          "wall.frame.lunar2025_b": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "lunar_near_year_2025_wall_divider_c": {
+        "Remove Allowed": true,
+        "Display Name": "Lunar Wall Frame Floral",
+        "Price": {},
+        "Refund": {
+          "wall.frame.lunar2025_c": {
             "amount": 1,
             "skinId": -1
           }
@@ -2705,6 +2918,17 @@
           }
         }
       },
+      "plantpot.single.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Single Plant Pot",
+        "Price": {},
+        "Refund": {
+          "plantpot.single": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
       "planter.large.deployed": {
         "Remove Allowed": true,
         "Display Name": "Large Planter Box",
@@ -2722,6 +2946,17 @@
         "Price": {},
         "Refund": {
           "planter.small": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "planter.triangle.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Triangle Planter Box",
+        "Price": {},
+        "Refund": {
+          "planter.triangle": {
             "amount": 1,
             "skinId": -1
           }
@@ -2865,6 +3100,17 @@
         "Price": {},
         "Refund": {
           "tincan.alarm": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "electric.digitalclock.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Digital Clock",
+        "Price": {},
+        "Refund": {
+          "electric.digitalclock": {
             "amount": 1,
             "skinId": -1
           }
@@ -3354,6 +3600,17 @@
           }
         }
       },
+      "sculpture.ice.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Ice Sculpture",
+        "Price": {},
+        "Refund": {
+          "sculpture.ice": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
       "searchlight.deployed": {
         "Remove Allowed": true,
         "Display Name": "Search Light",
@@ -3367,7 +3624,7 @@
       },
       "secretlabchair.deployed": {
         "Remove Allowed": true,
-        "Display Name": "Secret Lab Chair",
+        "Display Name": "Secretlab Chair",
         "Price": {},
         "Refund": {
           "secretlabchair": {
@@ -4157,6 +4414,17 @@
           }
         }
       },
+      "triangle_railroad_planter.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Triangle Rail Road Planter",
+        "Price": {},
+        "Refund": {
+          "triangle.rail.road.planter": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
       "rockingchair.deployed": {
         "Remove Allowed": true,
         "Display Name": "Rocking Chair",
@@ -4581,6 +4849,28 @@
         "Price": {},
         "Refund": {
           "skull.trophy": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "medieval.door.double.hinged.metal": {
+        "Remove Allowed": true,
+        "Display Name": "Medieval Sheet Metal Double Door",
+        "Price": {},
+        "Refund": {
+          "medieval.door.double.hinged.metal": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "medieval.door.hinged.metal": {
+        "Remove Allowed": true,
+        "Display Name": "Medieval Sheet Metal Door",
+        "Price": {},
+        "Refund": {
+          "medieval.door.hinged.metal": {
             "amount": 1,
             "skinId": -1
           }
@@ -5620,6 +5910,17 @@
           }
         }
       },
+      "orchid.entity": {
+        "Remove Allowed": false,
+        "Display Name": "Orchid Clone",
+        "Price": {},
+        "Refund": {
+          "clone.orchid": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
       "potato.entity": {
         "Remove Allowed": false,
         "Display Name": "Potato Clone",
@@ -5642,12 +5943,56 @@
           }
         }
       },
+      "rose.entity": {
+        "Remove Allowed": false,
+        "Display Name": "Rose Clone",
+        "Price": {},
+        "Refund": {
+          "clone.rose": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "sunflower.entity": {
+        "Remove Allowed": false,
+        "Display Name": "Sunflower Clone",
+        "Price": {},
+        "Refund": {
+          "clone.sunflower": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "wheat.entity": {
+        "Remove Allowed": false,
+        "Display Name": "Wheat Clone",
+        "Price": {},
+        "Refund": {
+          "clone.wheat": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
       "cctv_deployed": {
         "Remove Allowed": true,
         "Display Name": "CCTV Camera",
         "Price": {},
         "Refund": {
           "cctv.camera": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "modular_car_radio": {
+        "Remove Allowed": true,
+        "Display Name": "Car Radio",
+        "Price": {},
+        "Refund": {
+          "vehicle.car_radio": {
             "amount": 1,
             "skinId": -1
           }
@@ -5752,23 +6097,67 @@
           }
         }
       },
-      "electric.digitalclock.deployed": {
+      "discordtrophy_deployed": {
         "Remove Allowed": true,
-        "Display Name": "Digital Clock",
+        "Display Name": "Discord Trophy",
         "Price": {},
         "Refund": {
-          "electric.digitalclock": {
+          "discord.trophy": {
             "amount": 1,
             "skinId": -1
           }
         }
       },
-      "dpv.deployed": {
+      "gates.external.high.adobe": {
         "Remove Allowed": true,
-        "Display Name": "Diver propulsion vehicle",
+        "Display Name": "High External Adobe Gate",
         "Price": {},
         "Refund": {
-          "skidoo": {
+          "gates.external.high.adobe": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "gates.external.high.frontier": {
+        "Remove Allowed": true,
+        "Display Name": "High External Frontier Gate",
+        "Price": {},
+        "Refund": {
+          "gates.external.high.frontier": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "wall.external.high.adobe": {
+        "Remove Allowed": true,
+        "Display Name": "High External Adobe Wall",
+        "Price": {},
+        "Refund": {
+          "wall.external.high.adobe": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "wall.external.high.frontier": {
+        "Remove Allowed": true,
+        "Display Name": "High External Frontier Wall",
+        "Price": {},
+        "Refund": {
+          "wall.external.high.frontier": {
+            "amount": 1,
+            "skinId": -1
+          }
+        }
+      },
+      "faberge_egg_g.deployed": {
+        "Remove Allowed": true,
+        "Display Name": "Rustigé Egg - Cerulean",
+        "Price": {},
+        "Refund": {
+          "rustige_egg_g": {
             "amount": 1,
             "skinId": -1
           }
