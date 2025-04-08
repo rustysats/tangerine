@@ -1,0 +1,107 @@
+{
+  "How long should the tugboat be unmountable by other players for? [This will also repossess the tugboat if the player has not claimed it]": 300.0,
+  "Should the boat be removed if the player does not claim it within the safe time?": false,
+  "How much fuel should the tugboar spawn with?": 100,
+  "Draw on the players hud after puchasing the boat, to show its spawn location?": true,
+  "Limit the amount of boats a player can purchase during a wipe? [0 = no limit]": 0,
+  "Prevent the purchase of tugboats if the spawned amount exceeds the following [0 = no limit]": 0,
+  "Items required to purchase the tugboat": [
+    {
+      "shortname": "scrap",
+      "skin": 0,
+      "amount": 500
+    },
+    {
+      "shortname": "wood",
+      "skin": 0,
+      "amount": 2000
+    },
+    {
+      "shortname": "metal.fragments",
+      "skin": 0,
+      "amount": 200
+    },
+    {
+      "shortname": "metal.refined",
+      "skin": 0,
+      "amount": 20
+    }
+  ],
+  "Local spawn positions": {
+    "LargeFishingVillage": [
+      {
+        "x": 17.8,
+        "y": 1.9,
+        "z": 33.4
+      },
+      {
+        "x": -6.1,
+        "y": 1.9,
+        "z": 38.8
+      },
+      {
+        "x": -44.6,
+        "y": 1.9,
+        "z": 20.5
+      },
+      {
+        "x": 50.7,
+        "y": 1.9,
+        "z": 11.1
+      },
+      {
+        "x": 52.3,
+        "y": 1.9,
+        "z": -6.2
+      },
+      {
+        "x": 34.4,
+        "y": 1.9,
+        "z": 31.5
+      },
+      {
+        "x": -28.8,
+        "y": 1.9,
+        "z": 40.0
+      },
+      {
+        "x": -50.8,
+        "y": 1.9,
+        "z": 3.2
+      }
+    ],
+    "SmallFishingVillage": [
+      {
+        "x": 6.9,
+        "y": 1.9,
+        "z": 51.2
+      },
+      {
+        "x": 26.8,
+        "y": 1.9,
+        "z": 25.3
+      },
+      {
+        "x": -37.8,
+        "y": 1.9,
+        "z": -6.6
+      },
+      {
+        "x": -39.1,
+        "y": 1.9,
+        "z": 25.4
+      },
+      {
+        "x": 35.0,
+        "y": 1.9,
+        "z": -1.3
+      }
+    ]
+  },
+  "Chat option ui position": {
+    "anchorMin": "0.5 0.5",
+    "anchorMax": "0.5 0.5",
+    "offsetMin": "150.8 35.5",
+    "offsetMax": "411 55.5"
+  }
+}
