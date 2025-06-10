@@ -2,31 +2,6 @@
 
 **Welcome to Tangerine** — a unique Rust server where you can earn real Bitcoin while surviving, building and competing. Our custom gameplay is built around a player-driven economy, cooperative PvE world design and structured PvP challenges—with real sats on the line. Whether you prefer mining and upgrading your base or testing your skills in combat, Tangerine rewards your time with Bitcoin.
 
----
-
-## ₿ How to Earn Bitcoin on Tangerine
-
-There are **two main ways** to earn sats while playing:
-
-### ⛏️ 1. Mine for a Share of 100,000 Sats  
-Every wipe features a **100,000 satoshi prize pool** tied to mining participation.
-
-- Build mining rigs using in-game Computer Stations.
-- Power them, manage heat, and upgrade for better hash output.
-- Turn in your hash throughout the wipe to Outpost or Bandit Camp.
-- Your share of the sats is based on how much hash you contributed.
-
-Use `/claim` at the start of the next wipe to receive your **Blood**, which can be turned into Bitcoin with `/sendblood`.
-
-### 🎯 2. Win Arena Events for 21 Sats  
-Every hour, a new **PvP Arena** opens on the map.
-
-- Gear-safe structured combat—no risk to your inventory.
-- Compete in skill-based battles in arena combat.
-- Winners earn **21 sats** per event deposited via Blood.
-
----
-
 ## 🌟 Key Features
 
 ### 🌐 World Structure
@@ -59,6 +34,31 @@ Blood is the primary asset on Tangerine and acts as a transferable in-game curre
 
 - **Raidable Bases**: Enter, fight, and loot—PvP enabled once inside.
 - **Hourly Arenas**: Compete for 21 sats every hour in balanced, structured battles.
+
+---
+
+## ₿ How to Earn Bitcoin on Tangerine
+
+There are **two main ways** to earn sats while playing:
+
+### ⛏️ 1. Mine for a Share of 100,000 Sats  
+Every wipe features a **100,000 satoshi prize pool** tied to mining participation.
+
+- Build mining rigs using in-game Computer Stations.
+- Power them, manage heat, and upgrade for better hash output.
+- Turn in your hash throughout the wipe to Outpost or Bandit Camp.
+- Your share of the sats is based on how much hash you contributed.
+
+Use `/claim` at the start of the next wipe to receive your **Blood**, which can be turned into Bitcoin with `/sendblood`.
+
+### 🎯 2. Win Arena Events for 21 Sats  
+Every hour, a new **PvP Arena** opens on the map.
+
+- Gear-safe structured combat—no risk to your inventory.
+- Compete in skill-based battles in arena combat.
+- Winners earn **21 sats** per event deposited via Blood.
+
+---
 
 ## 📜 Server Details and Logs
 
